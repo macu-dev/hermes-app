@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/macu-dev/hermes-app/compare/v1.0.0...v1.1.0) (2024-09-12)
+
+
+### Features
+
+* **github:** update workflow release ([8cef2de](https://github.com/macu-dev/hermes-app/commit/8cef2deb3e155c46ce86422927faecec3e86c8b4))
+
 # 1.0.0 (2024-09-05)
 
 
