@@ -1,6 +1,5 @@
 {
   "name": "@macu-dev/hermes-app",
-  "private": true,
   "version": "1.2.0",
   "type": "module",
   "scripts": {
@@ -42,5 +41,8 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
