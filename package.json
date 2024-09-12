@@ -10,7 +10,10 @@
     "preview": "vite preview",
     "semantic-release": "semantic-release"
   },
-  "repository": "https://github.com/macu-dev/hermes-app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/macu-dev/hermes-app"
+  },
   "dependencies": {
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jsx-a11y": "^6.10.0",
