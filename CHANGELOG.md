@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/macu-dev/hermes-app/compare/v1.3.0...v1.4.0) (2024-09-12)
+
+
+### Bug Fixes
+
+* **package:** fix ([4b28d2e](https://github.com/macu-dev/hermes-app/commit/4b28d2e25698419a08b9d6587fc38189563152c7))
+
+
+### Features
+
+* **package:** add link repository ([09826d7](https://github.com/macu-dev/hermes-app/commit/09826d7e6f8fcedf24568781ab3dc1c8f8fdd996))
+
 # [1.3.0](https://github.com/macu-dev/hermes-app/compare/v1.2.0...v1.3.0) (2024-09-12)
 
 
