@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/macu-dev/hermes-app/compare/v1.4.1...v1.5.0) (2024-09-12)
+
+
+### Features
+
+* **css:** quit style ([9084489](https://github.com/macu-dev/hermes-app/commit/90844896c85441d028fd62258771180ab2a1f468))
+
 ## [1.4.1](https://github.com/macu-dev/hermes-app/compare/v1.4.0...v1.4.1) (2024-09-12)
 
 
