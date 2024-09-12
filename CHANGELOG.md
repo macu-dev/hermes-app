@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/macu-dev/hermes-app/compare/v1.1.0...v1.2.0) (2024-09-12)
+
+
+### Features
+
+* **github:** add env npm toke ([dbcc716](https://github.com/macu-dev/hermes-app/commit/dbcc716ac01d682263db39b870e291152d5cbd9e))
+
 # [1.1.0](https://github.com/macu-dev/hermes-app/compare/v1.0.0...v1.1.0) (2024-09-12)
 
 
