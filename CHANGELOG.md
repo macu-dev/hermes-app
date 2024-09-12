@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/macu-dev/hermes-app/compare/v1.2.0...v1.3.0) (2024-09-12)
+
+
+### Features
+
+* **package:** update package.json ([7cb7875](https://github.com/macu-dev/hermes-app/commit/7cb787572a6d5e0a21fa99c48b4a65382006102c))
+
 # [1.2.0](https://github.com/macu-dev/hermes-app/compare/v1.1.0...v1.2.0) (2024-09-12)
 
 
