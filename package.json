@@ -1,5 +1,5 @@
 {
-  "name": "@macu-dev/hermes-app",
+  "name": "macu-dev/hermes-app",
   "version": "1.3.0",
   "type": "module",
   "scripts": {
@@ -43,6 +43,7 @@
     "vite": "^5.4.1"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/",
+    "tag": "latest"
   }
 }
