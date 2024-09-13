@@ -1,3 +1,13 @@
+## [1.8.0](https://github.com/macu-dev/hermes-app/compare/v1.7.0...v1.8.0) (2024-09-13)
+
+### ✨ New Features
+
+* **releaserc:** update ([a210370](https://github.com/macu-dev/hermes-app/commit/a2103709dbfef644677f21c7e28e7726757bddc5))
+
+### 🐛 Bug Fixes
+
+* **src:** fix ([c53ee5a](https://github.com/macu-dev/hermes-app/commit/c53ee5a33a9e118f9634e5fee389ccc496b0eadf))
+
 # [1.7.0](https://github.com/macu-dev/hermes-app/compare/v1.6.0...v1.7.0) (2024-09-13)
 
 
