@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/macu-dev/hermes-app/compare/v1.5.0...v1.6.0) (2024-09-13)
+
+
+### Features
+
+* **src:** quit npmrc ([0f8f20f](https://github.com/macu-dev/hermes-app/commit/0f8f20f7ed4fefb57a7db42c1344094b3811ef22))
+
 # [1.5.0](https://github.com/macu-dev/hermes-app/compare/v1.4.1...v1.5.0) (2024-09-12)
 
 
