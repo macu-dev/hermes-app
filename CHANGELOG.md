@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/macu-dev/hermes-app/compare/v1.6.0...v1.7.0) (2024-09-13)
+
+
+### Features
+
+* **releaserc:** update ([f316cfe](https://github.com/macu-dev/hermes-app/commit/f316cfe8f649bfeee41526099b4fdcdd531b533a))
+
 # [1.6.0](https://github.com/macu-dev/hermes-app/compare/v1.5.0...v1.6.0) (2024-09-13)
 
 
