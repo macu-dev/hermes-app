@@ -3,8 +3,48 @@
   "repositoryUrl": "https://github.com/macu-dev/hermes-app",
   "debug": "false",
   "plugins": [
-    "@semantic-release/commit-analyzer",
-    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "angular",
+        "releaseRules": [
+          { "type": "feat", "release": "minor" },
+          { "type": "fix", "release": "patch" },
+          { "type": "chore", "release": false },
+          { "type": "docs", "release": false },
+          { "type": "perf", "release": "patch" },
+          { "type": "build", "release": false },
+          { "type": "deps", "release": "patch" },
+          { "type": "ci", "release": false },
+          { "type": "refactor", "release": "patch" },
+          { "type": "revert", "release": "patch" },
+          { "type": "style", "release": false },
+          { "type": "test", "release": false }
+        ]
+      }
+    ],
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "preset": "angular",
+        "presetConfig": {
+          "types": [
+            { "type": "feat", "section": "✨ New Features" },
+            { "type": "fix", "section": "🐛 Bug Fixes" },
+            { "type": "chore", "section": "🧹 Chore", "hidden": true },
+            { "type": "docs", "section": "📝 Documentation", "hidden": true },
+            { "type": "perf", "section": "⚡ Performance" },
+            { "type": "build", "section": "🏭 Build", "hidden": true },
+            { "type": "deps", "section": "📦 Dependencies" },
+            { "type": "ci", "section": "🤖 CI", "hidden": true },
+            { "type": "refactor", "section": "🔄 Refactoring" },
+            { "type": "revert", "section": "🔙 Reverts" },
+            { "type": "style", "section": "🎨 Styling", "hidden": true },
+            { "type": "test", "section": "🧪 Tests", "hidden": true }
+          ]
+        }
+      }
+    ],
     [
       "@semantic-release/changelog",
       {
@@ -21,7 +61,6 @@
       }
     ]
   ],
-  "preset": "angular",
   "npmPublish": true,
   "pkgRoot": ".",
   "registry": "https://npm.pkg.github.com"
