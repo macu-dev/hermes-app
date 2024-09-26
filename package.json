@@ -19,6 +19,8 @@
     "url": "https://github.com/macu-dev/hermes-app"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.7",
+    "@types/react-router-dom": "^5.3.3",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jsx-a11y": "^6.10.0",
     "eslint-plugin-prettier": "^5.2.1",
@@ -28,7 +30,8 @@
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
