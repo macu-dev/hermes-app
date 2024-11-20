@@ -1,6 +1,6 @@
 // features/auth/authActions.js
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import apiClient from '../../../infraestructure/api/axiosConfig'
+import apiClient from '@/infraestructure/api/axiosConfig'
 
 interface LoginUserArgs {
   email: string
@@ -11,7 +11,7 @@ export const registerUser = createAsyncThunk(
   'auth/register',
   async ({ email, password }: LoginUserArgs, { rejectWithValue }) => {
     try {
-      const response = await apiClient.post('/api/user/register', { email, password })
+      const response = await apiClient.post('/auth/user/register', { email, password })
 
       return response.data
     } catch (error) {
@@ -26,7 +26,7 @@ export const loginUser = createAsyncThunk(
   'auth/login',
   async ({ email, password }: LoginUserArgs, { rejectWithValue }) => {
     try {
-      const response = await apiClient.post('/api/user/login', { email, password })
+      const response = await apiClient.post('/auth/login', { email, password })
 
       return response.data
     } catch (error) {

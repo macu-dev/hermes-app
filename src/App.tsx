@@ -1,8 +1,8 @@
-import './App.css'
-import { Login } from './ui/pages/login'
+import '@/App.css'
+import { Login } from '@/ui/pages/login'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { NotFound } from './ui/pages/notFound'
-import Dashboard from './ui/pages/dashboard/Dashboard'
+import { NotFound } from '@/ui/pages/notFound'
+import Dashboard from '@/ui/pages/dashboard/Dashboard'
 
 function App() {
   return (

@@ -1,6 +1,5 @@
 import { UserInfo } from '../../domain/entities/User'
 import { configureStore } from '@reduxjs/toolkit'
-import { userSlice } from './states/user'
 import { authSlice } from './states/auth'
 import { api } from '../../infraestructure/api/api'
 
@@ -16,7 +15,6 @@ export interface AppStore {
 
 export default configureStore({
   reducer: {
-    user: userSlice.reducer,
     auth: authSlice.reducer,
     [api.reducerPath]: api.reducer,
   },

@@ -19,7 +19,11 @@ const initialState: autSlice = {
 export const authSlice = createSlice({
   name: 'auth',
   initialState,
-  reducers: {},
+  reducers: {
+    setCredentials: (state, { payload }) => {
+      state.userInfo = payload
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(registerUser.pending, (state) => {
@@ -38,10 +42,11 @@ export const authSlice = createSlice({
         state.loading = true
         state.error = null
       })
-      .addCase(loginUser.fulfilled, (state, { payload }) => {
+      .addCase(loginUser.fulfilled, (state) => {
         state.loading = false
         state.success = true
-        state.userInfo = payload
+        //state.userInfo = payload //
+        // we should consume the api user information
       })
       .addCase(loginUser.rejected, (state, { payload }) => {
         state.loading = false
