@@ -7,6 +7,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { Button } from '@/components/ui/button'
 import { Form } from '@/components/ui/form'
 import FormInput from '@/ui/commons/components/FormInput'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
   const formSchema = z.object({
@@ -37,6 +38,8 @@ const Login = () => {
           <Button type='submit'>Submit</Button>
         </form>
       </Form>
+      <p>No tienes una cuenta?</p>
+      <Link to='/signup'>Crear cuenta</Link>
     </div>
   )
 }

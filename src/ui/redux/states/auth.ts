@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { UserInfo } from '../../../domain/entities/User'
 import { loginUser, registerUser } from '../actions/auth'
+import { AppStore } from '../store'
 
 interface autSlice {
   loading: boolean
@@ -15,6 +16,9 @@ const initialState: autSlice = {
   error: null,
   success: false, // for monitoring the registration process.
 }
+
+export const selectUserInfo = (state: AppStore) => state.auth.userInfo
+export const selectAuthInfo = (state: AppStore) => state.auth
 
 export const authSlice = createSlice({
   name: 'auth',
