@@ -44,6 +44,10 @@ export default {
           DEFAULT: 'var(--success)',
           foreground: 'var(--success-foreground)',
         },
+        warning: {
+          DEFAULT: 'var(--warning)',
+          foreground: 'var(--warning-foreground)',
+        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

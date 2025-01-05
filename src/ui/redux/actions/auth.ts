@@ -1,6 +1,7 @@
 // features/auth/authActions.js
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import apiClient from '@/infraestructure/api/axiosConfig'
+import { Error } from '@/lib/errorHandler'
 
 interface LoginUserArgs {
   email: string
@@ -17,7 +18,7 @@ export const registerUser = createAsyncThunk(
     } catch (error) {
       const err = error as Error
 
-      return rejectWithValue(err.message || 'Error en el registro')
+      return rejectWithValue(err.response?.data.message || err.code)
     }
   },
 )
@@ -32,7 +33,7 @@ export const loginUser = createAsyncThunk(
     } catch (error) {
       const err = error as Error
 
-      return rejectWithValue(err.message || 'Error en el login')
+      return rejectWithValue(err.code)
     }
   },
 )

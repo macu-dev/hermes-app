@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useNavigate } from 'react-router-dom'
 
 import { Button } from '@/components/ui/button'
 import { Form } from '@/components/ui/form'
@@ -14,6 +15,7 @@ import { updateAlert } from '@/ui/redux/states/alert'
 const Signup = () => {
   const dispatch = useDispatch<AppDispatch>()
   const authState = useSelector(selectAuthInfo)
+  const navigate = useNavigate()
 
   const formSchema = z
     .object({
@@ -48,17 +50,18 @@ const Signup = () => {
           message: 'Tu cuenta ha sido creada con éxito.',
         }),
       )
+      //form.reset()
+      navigate('/login')
     } catch (error) {
+      const err = error as string
+
       dispatch(
         updateAlert({
-          variant: 'success',
+          variant: 'error',
           title: 'Error en el Registro',
-          message:
-            typeof error === 'string' ? error : 'Hubo un problema al intentar crear tu cuenta.',
+          message: authState.error || err,
         }),
       )
-      console.error('Error al registrar usuario:', error)
-      //mensaje de error el back mandara codigo de error
     }
   }
 
@@ -66,8 +69,8 @@ const Signup = () => {
     <div>
       <Form {...form}>
         <form className='space-y-8' onSubmit={form.handleSubmit(onSubmit)}>
-          <FormInput label='Email' name='email' />
-          <FormInput label='Password' name='password' type='password' />
+          <FormInput label='Correo electronico' name='email' />
+          <FormInput label='Contrase' name='password' type='password' />
           <FormInput label='ConfirmPassword' name='confirmPassword' type='password' />
           <Button disabled={authState.loading} type='submit'>
             Submit

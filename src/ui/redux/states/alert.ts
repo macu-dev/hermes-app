@@ -5,8 +5,8 @@ export type variantAlert = 'success' | 'warning' | 'error'
 
 interface AlertPayload {
   variant: variantAlert | null
-  title: string | null
-  message: string | null
+  title?: string | null
+  message?: string | null
 }
 
 const alertState = {

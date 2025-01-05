@@ -35,7 +35,7 @@ const Login = () => {
         <form className='space-y-8' onSubmit={form.handleSubmit(onSubmit)}>
           <FormInput label='Email' name='email' />
           <FormInput label='Password' name='password' type='password' />
-          <Button type='submit'>Submit</Button>
+          <Button type='submit'>submit</Button>
         </form>
       </Form>
       <p>No tienes una cuenta?</p>

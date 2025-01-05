@@ -1,4 +1,5 @@
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
+import { getErrorMessage } from '@/lib/errorHandler'
 import { resetAlert, selectAlertInfo } from '@/ui/redux/states/alert'
 import { AlertCircle, CircleCheckBig, CircleX } from 'lucide-react'
 import { useEffect } from 'react'
@@ -14,6 +15,7 @@ const iconsToast = {
 const Toast = () => {
   const alertInfo = useSelector(selectAlertInfo)
   const dispatch = useDispatch()
+  const isErrorAlert = alertInfo.variant === 'error'
 
   useEffect(() => {
     if (alertInfo.variant) {
@@ -23,14 +25,17 @@ const Toast = () => {
 
       return () => clearTimeout(timer)
     }
-  }, [alertInfo, dispatch])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [alertInfo.variant])
 
   return (
     <Alert className={!alertInfo.variant ? 'invisible' : ''} variant={alertInfo.variant}>
       {iconsToast[alertInfo.variant || 'default']}
       <div className='ml-[5px]'>
         <AlertTitle>{alertInfo.title}</AlertTitle>
-        <AlertDescription>{alertInfo.message}</AlertDescription>
+        <AlertDescription>
+          {isErrorAlert ? getErrorMessage(alertInfo.message || '') : alertInfo.message}
+        </AlertDescription>
       </div>
     </Alert>
   )
